@@ -31,9 +31,6 @@ cd "${packageDir}" || exit
 cp ${CURRENT_WORKSPACE}/Dockerfile "${packageDir}"
 cp ${CURRENT_WORKSPACE}/secure_start.sh "${packageDir}"
 
-mkdir -p ${packageDir}/java
-tar -zxvf ${PUBLIC_DIR}/openlogic*.tar.gz -C ${packageDir}/java --strip-components=1
-
 # 定义条件命令
 SKIP_TESTS_CMD=""
 if [ "$SKIP_TESTS" = "true" ]; then

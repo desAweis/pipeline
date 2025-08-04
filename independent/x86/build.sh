@@ -19,9 +19,7 @@ bash modify.sh
 
 mkdir -p ${WORKSPACE}/output
 
-# 下载 jdk17
 mkdir -p ${WORKSPACE}/public
-wget -P ${WORKSPACE}/public https://builds.openlogic.com/downloadJDK/openlogic-openjdk/17.0.14+7/openlogic-openjdk-17.0.14+7-linux-x64.tar.gz
 
 cd ${WORKSPACE}
 echo "=== Building app-builder... ==="

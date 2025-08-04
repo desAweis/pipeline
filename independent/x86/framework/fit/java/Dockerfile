@@ -13,11 +13,8 @@ ENV APP_PATH /opt/fit-framework
 COPY log_collect.sh /log_collect.sh
 RUN chmod 550 /log_collect.sh
 
-RUN mkdir -p /usr/local/java
-COPY java /usr/local/java
-ENV JAVA_HOME=/usr/local/java
-ENV PATH=/usr/local/java/bin:${PATH}
-RUN chmod -R +x /usr/local/java/bin
+RUN yum makecache && \
+    yum install -y java-21-openjdk-devel
 
 #镜像仓里的
 RUN mkdir -p /opt

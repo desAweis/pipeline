@@ -130,8 +130,6 @@ cd "${packageDir}" || exit
 cp "${CURRENT_WORKSPACE}/start.sh" "${packageDir}/fit/bin/"
 chmod 700 "${packageDir}"/fit/bin/*.sh
 
-mkdir -p ${packageDir}/java
-tar -zxvf ${PUBLIC_DIR}/openlogic*.tar.gz -C ${packageDir}/java --strip-components=1
 echo "build the backend image by base image"
 
 mkdir -p "${packageDir}/form"
